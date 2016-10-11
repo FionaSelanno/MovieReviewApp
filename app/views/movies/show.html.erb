@@ -5,3 +5,7 @@
 <p><%=@movie.released_on%></p>
 <p><%=@movie.total_gross%></p>
 <p><%=number_to_currency(@movie.total_gross)%></p>
+
+<p>
+  <%= link_to "All Movies", movies_path %>
+</p>
