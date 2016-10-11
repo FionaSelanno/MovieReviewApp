@@ -1,28 +1,11 @@
-== README
+== Introduction
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I wanted to learn more about TDD so I made this movie review app following the Pragmatic studio tutorial. I used Rspec an Capybara to run the tests.  It’s a WORK IN PROGRESS 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Installation
+    - Clone this repository
+    - rake db:create
+    - rake db:migrate
+    - bundle install
+    - rails s
+    - open http://localhost:3000
