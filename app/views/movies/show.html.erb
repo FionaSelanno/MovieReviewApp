@@ -1,0 +1,10 @@
+<h1><%=@movie.title%></h1>
+
+<p><%=@movie.rating%></p>
+<p><%=@movie.description%></p>
+<p><%=@movie.released_on%></p>
+<p><%=format_total_gross(@movie)%></p>
+
+<p>
+  <%= link_to "All Movies", movies_path %>
+</p>
