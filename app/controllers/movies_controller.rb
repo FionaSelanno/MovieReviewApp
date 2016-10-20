@@ -12,4 +12,21 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
+  def update
+    @movie = Movie.find(params[:id])
+    if @movie.update(movie_params)
+      redirect_to movie_path(@movie), notice: "Movie was succesfully updated"
+      #redirect to the movie_path and run the show action to see the updates
+    else
+      render 'edit'
+    end
+  end
+
+  private
+
+  def movie_params
+    params.require(:movie).permit(
+      :title, :description, :rate, :total_gross, :released_on )
+  end
+
 end
