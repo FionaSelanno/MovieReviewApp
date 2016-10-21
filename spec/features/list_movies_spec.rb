@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "Viewing the list of movies" do
   it "shows the movies" do
-    movie1 = Movie.create(movie_attributes)
+    movie1 = Movie.create(movie_attributes) #movie_attributes calls a method in spec/support/attributes.rb to keep this code DRY.
 
     movie2 = Movie.create(title: "Superman",
                       rating: "PG",
@@ -16,7 +16,7 @@ describe "Viewing the list of movies" do
                       description: "Peter Parker gets bit by a genetically modified spider",
                       released_on: "2002-05-03")
 
-    visit movies_url
+    visit movies_url #simulates a user visiting the listing-page
 
     expect(page).to have_text("3 Movies")
 

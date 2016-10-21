@@ -22,11 +22,24 @@ class MoviesController < ApplicationController
     end
   end
 
+  def new
+    @movie= Movie.new
+  end
+
+  def create
+    @movie= Movie.new(movie_params)
+    if @movie.save
+      redirect_to movie_path(@movie), notice: "Movie was succesfully created"
+    else
+      render "new"
+    end
+  end
+
   private
 
   def movie_params
     params.require(:movie).permit(
-      :title, :description, :rate, :total_gross, :released_on )
+      :title, :description, :rating, :total_gross, :released_on )
   end
 
 end
