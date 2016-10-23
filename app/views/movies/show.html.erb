@@ -9,4 +9,4 @@
   <%= link_to "All Movies", movies_path %>
   <%= link_to "Edit", edit_movie_path(@movie)%>
   <%= link_to "Add New Movie", new_movie_path %>
-</p>
+  <%= link_to "Delete Movie", movie_path(@movie), method: :delete, data: {confirm: "Are you sure?"} %></p>  <!-- without the method: :delete , the link will get a GET request which goes to the show action. For deleting you need a DELETE request by overwriting it -->
