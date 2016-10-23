@@ -1,31 +1,5 @@
 <h1> Create New Movie Review </h1>
 
-<%= form_for @movie do |f| %>
-    <p>
-      <%= f.label :title %>
-      <%= f.text_field :title %><br>
-    </p>
+<%= render 'form' %>
 
-    <p>
-      <%= f.label :description %>
-      <%= f.text_area :description, cols:40 %><br />
-    </p>
-
-    <p>
-      <%= f.label :rating %>
-      <%= f.text_field :rating %><br>
-    </p>
-
-    <p>
-      <%= f.label :released_on %>
-      <%= f.date_field :released_on %><br />
-    </p>
-
-    <p>
-      <%= f.label :total_gross %>
-      <%= f.number_field :total_gross %>
-    </p>
-
-    <p> <%= f.submit %></p>
-
-<%end%>
+<%= link_to "Cancel", movies_path %>
