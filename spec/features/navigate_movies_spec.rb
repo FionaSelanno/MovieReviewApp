@@ -11,7 +11,7 @@ describe "Navigating movies" do
     expect(current_path).to eq(movies_path)
   end
 
-  it "allows navigation from the listing page to go the show page of one movie" do
+  it "allows navigation from the listing page to go to the show page of one movie" do
     movie1 = Movie.create(movie_attributes)
 
     visit movies_url
