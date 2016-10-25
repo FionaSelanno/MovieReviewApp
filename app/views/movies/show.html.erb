@@ -4,6 +4,10 @@
 <p><%=@movie.description%></p>
 <p><%=@movie.released_on%></p>
 <p><%=format_total_gross(@movie)%></p>
+<p><%=@movie.director%></p>
+<p><%=@movie.cast%></p>
+<p><%=@movie.duration%></p>
+<p><%=image_tag(@movie.image_file_name)%></p>
 
 <p>
   <%= link_to "All Movies", movies_path %>

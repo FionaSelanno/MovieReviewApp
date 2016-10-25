@@ -15,6 +15,10 @@ describe "creating a new movie review" do
   fill_in "Rating", with: "5 stars"
   fill_in "Total gross", with: "70000000"
   fill_in "Released on", with: (Time.now.year - 1).to_s
+  fill_in "Cast", with: "Angelina Jolie, Brad Pitt"
+  fill_in "Director", with: "Steven Spielberg"
+  fill_in "Duration", with: "120 min"
+  fill_in "Image file name", with: "batman.jpg"
 
   click_button 'Create Movie' #simulating clicking the button to create a movie
 

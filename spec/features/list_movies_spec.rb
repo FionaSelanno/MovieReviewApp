@@ -29,6 +29,10 @@ describe "Viewing the list of movies" do
     expect(page).to have_text(movie1.description[0..10])
     expect(page).to have_text(movie1.released_on)
     expect(page).to have_text("$318,412,101.00")
+    expect(page).to have_text(movie1.cast)
+    expect(page).to have_text(movie1.director)
+    expect(page).to have_text(movie1.duration)
+    expect(page).to have_text(movie1.image_file_name)
   end
 
   it "does not show a movie that has not been released yet" do
